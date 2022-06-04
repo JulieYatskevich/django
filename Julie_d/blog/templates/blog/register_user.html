@@ -1,0 +1,18 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Мой блог{% endblock %}
+
+{% block content %}
+{% if form.errors %}
+<p>Ошибка в заполении полей</p>
+{% endif %}
+  <h1>Регистрация</h1>
+<br/>
+    <form action="{% url 'register_user' %}" method=POST>
+      {% csrf_token %}
+      {{ form.as_p }}
+<br></br>      
+      <input type="submit"
+      value="Зарегистрироваться" class="btn btn-secondary">
+    </form>
+{% endblock %}

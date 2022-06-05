@@ -1,0 +1,27 @@
+{% extends 'catalog/layout.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+  <div class="features">
+    <h1>Catalog</h1>
+    <div class='container'>
+    {% for car_mod in car %}
+      <div class='alert alert-warning'>
+        <h6>{{ car_mod.car_brand }} {{ car_mod.car_model}}</h6>
+        Color: {{ car_mod.car_color}}
+        Motor: {{ car_mod.car_motor}}
+        {{ car_mod.cavailable}}
+        Year: {{ car_mod.year}}
+        <p>Price: {{ car_mod.car_price}} USD </p>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+{% endblock %}
+
+
+
+

@@ -1,0 +1,15 @@
+{% extends 'catalog/layout.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<br>
+  <form method='POST'>
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button>Save</button>
+  </form>
+
+{% endblock %}

@@ -1,5 +1,6 @@
 from django import forms
-from .models import *
+
+from .models import Brand, Motor, color_choices
 
 
 class BrandForm(forms.Form):

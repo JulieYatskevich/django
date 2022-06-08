@@ -2,14 +2,14 @@ from django.db import models
 
 
 color_choices = (
-    ("black", "black"),
-    ("red", "red"),
-    ("gray", "gray"),
-    ("biege", "biege"),
-    ("green", "green"),
-    ("dark-gray", "dark-gray"),
-    ("blue", "blue"),
-    ("white", "white"),
+    ('black', 'black'),
+    ('red', 'red'),
+    ('gray', 'gray'),
+    ('biege', 'biege'),
+    ('green', 'green'),
+    ('dark-gray', 'dark-gray'),
+    ('blue', 'blue'),
+    ('whit', 'white'),
 )
 
 

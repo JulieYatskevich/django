@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect
-from .forms import BrandForm, MotorForm, CarForm
-from . models import Brand, Motor, Car
+from django.shortcuts import redirect, render
+
+from .forms import BrandForm, CarForm, MotorForm
+from .models import Brand, Car, Motor
 
 
 def index(request):
@@ -16,8 +17,6 @@ def brand(request):
                 brand_country=form.cleaned_data['brand_country'],
             )
             return redirect('main')
-        else:
-            print(form._dict_)
 
     form = BrandForm()
     context = {'form': form}
@@ -31,9 +30,6 @@ def add_motor(request):
             Motor.objects.create(
                 engine_capacity=form.cleaned_data['engine_capacity'],
             )
-            return redirect('main')
-        else:
-            print(form._dict_)
 
     form = MotorForm()
     context = {'form': form}
@@ -54,8 +50,6 @@ def add_car(request):
                 year=form.cleaned_data['year'],
             )
             return redirect('main')
-        else:
-            print(form._dict_)
 
     form = CarForm()
     context = {'form': form}

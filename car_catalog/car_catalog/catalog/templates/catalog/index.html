@@ -1,0 +1,18 @@
+{% extends 'catalog/layout.html' %}
+{% load crispy_forms_tags %}
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+  <div class="features">
+    <h1>{{ title }}</h1>
+    <p>Каталог автомобилей</p>
+    <a class="btn btn-outline-warning" href="/brand"> Add brand</a>
+    <a class="btn btn-outline-warning" href="/add-motor">Add motor</a>
+    <a class="btn btn-outline-warning" href="/add-car">Add car</a>
+    <br></br>
+    <a class="btn btn-warning" href="/catalog">CATALOG</a>
+  </div>
+
+{% endblock %}
